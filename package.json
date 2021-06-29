@@ -2,6 +2,7 @@
   "name": "server-setup",
   "version": "0.1.0",
   "scripts": {
-    "postinstall": "npm install --prefix server && npm install --prefix client"
-  }
+    "start": "npm run server --prefix server",
+    "postinstall": "npm install --prefix server && npm install --prefix client && npm run build --prefix client"
+  },
 }
