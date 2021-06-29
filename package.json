@@ -1,7 +1,7 @@
 {
-    
+  "name": "server-setup",
+  "version": "0.1.0",
   "scripts": {
-    "start": "cd server && node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "postinstall": "npm install --prefix server && npm install --prefix client"
   }
 }
