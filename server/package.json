@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "concurrently \"nodemon server.js\" \"cd ../client && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run server --prefix backend",
-    "postinstall": "npm install --prefix backend"
+    "start": "npm run server",
+    "postinstall": "npm install"
   },
   "author": "",
   "license": "ISC",
