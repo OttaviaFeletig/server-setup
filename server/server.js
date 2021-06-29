@@ -24,15 +24,15 @@ app.use(cors());
 app.use("/jobs", require("./routes/jobs"));
 app.use("/companies", require("./routes/companies"));
 
-app.use(express.static(path.join(`${__dirname}`, "..", "client", "build")));
-app.get("*", (req, res) => {
-  res
-    .set(
-      "Content-Security-Policy",
-      "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'"
-    )
-    .sendFile(path.join(`${__dirname}`, "..", "client", "build", "index.html"));
-});
+// app.use(express.static(path.join(`${__dirname}`, "..", "client", "build")));
+// app.get("*", (req, res) => {
+//   res
+//     .set(
+//       "Content-Security-Policy",
+//       "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'"
+//     )
+//     .sendFile(path.join(`${__dirname}`, "..", "client", "build", "index.html"));
+// });
 
 const port = process.env.PORT || 5000;
 
