@@ -24,6 +24,4 @@ app.use(cors());
 app.use("/jobs", require("./routes/jobs"));
 app.use("/companies", require("./routes/companies"));
 
-const port = process.env.PORT || 5000;
-
 app.listen(port, () => console.log(`Server started on port ${port}`));
