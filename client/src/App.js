@@ -4,7 +4,7 @@ import "./App.css";
 const serverURL = require("./config.js").serverURL;
 function App() {
   const [jobs, setJobs] = useState([]);
-
+  console.log(`serverURL`, serverURL);
   useEffect(() => {
     fetch(`${serverURL}/jobs/Berlin`)
       .then((res) => res.json())
